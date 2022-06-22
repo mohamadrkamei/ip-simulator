@@ -10,6 +10,6 @@ public class GenerateIpFileImpl implements GenerateIpFile {
     @Override
     public void putIpOrder(IpOrderRequest ipOrderRequest) {
 
-        System.out.print("ok");
+
     }
 }
