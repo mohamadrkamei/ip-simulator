@@ -1,7 +1,5 @@
 package com.example.ipsimulator;
 
-import com.example.ipsimulator.model.objectValue.order.BkToCstmrStmt;
-import com.example.ipsimulator.model.objectValue.order.Document;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.junit.jupiter.api.Test;
