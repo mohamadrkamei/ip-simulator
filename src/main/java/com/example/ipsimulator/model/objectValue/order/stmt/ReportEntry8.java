@@ -104,9 +104,17 @@ public class ReportEntry8 {
     @XmlElement(name = "CardTx", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public CardEntry2 cardTx;
     @XmlElement(name = "NtryDtls", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
-    public List<EntryDetails7> ntryDtls;
+    public EntryDetails7 ntryDtls;
     @XmlElement(name = "AddtlNtryInf", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public String addtlNtryInf;
+
+
+
+
+    public void setNtryDtls(EntryDetails7 ntryDtls){
+        this.ntryDtls = ntryDtls;
+    }
+
 
     /**
      * Gets the value of the ntryRef property.
@@ -543,10 +551,8 @@ public class ReportEntry8 {
      *
      *
      */
-    public List<EntryDetails7> getNtryDtls() {
-        if (ntryDtls == null) {
-            ntryDtls = new ArrayList<EntryDetails7>();
-        }
+    public EntryDetails7 getNtryDtls() {
+
         return this.ntryDtls;
     }
 

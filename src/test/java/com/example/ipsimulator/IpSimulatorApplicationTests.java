@@ -1,8 +1,13 @@
 package com.example.ipsimulator;
 
+import com.example.ipsimulator.model.entity.IpOrderRequest;
+import com.example.ipsimulator.model.objectValue.order.stmt.BankToCustomerStatementV06;
+import com.example.ipsimulator.model.objectValue.order.stmt.Document;
+import com.example.ipsimulator.services.GenerateIpFile;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
@@ -14,6 +19,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest
 class IpSimulatorApplicationTests {
 
+
+    @Autowired
+    GenerateIpFile generateIpFile ;
+
     @Test
     void contextLoads() {
     }
@@ -21,18 +30,15 @@ class IpSimulatorApplicationTests {
     @Test
     public void serializeIpTransactionToXml() throws JsonProcessingException, FileNotFoundException {
 
+    }
 
-        XmlMapper xmlMapper = new XmlMapper();
-        BkToCstmrStmt bkToCstmrStmt = new BkToCstmrStmt();
-        String xml = xmlMapper.writeValueAsString(new  Document(bkToCstmrStmt));
-        File file =  new File ("D:\\ipstm.xml");
-        PrintWriter pw = new PrintWriter(file);
+    @Test
+    public void putStatment(){
+        IpOrderRequest ipOrderRequest = new IpOrderRequest();
+        ipOrderRequest.setCount(2);
+        ipOrderRequest.setCycleNo(1);
+        generateIpFile.putSTMT(ipOrderRequest);
 
-        pw.write(xml);
-
-        pw.flush();
-        pw.close();
-        assertNotNull(file);
     }
 
 }

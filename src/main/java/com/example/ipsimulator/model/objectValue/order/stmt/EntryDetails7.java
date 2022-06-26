@@ -39,7 +39,7 @@ public class EntryDetails7 {
     @XmlElement(name = "Btch", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public BatchInformation2 btch;
     @XmlElement(name = "TxDtls", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
-    public List<EntryTransaction8> txDtls;
+    public EntryTransaction8 txDtls;
 
     /**
      * Gets the value of the btch property.
@@ -87,11 +87,11 @@ public class EntryDetails7 {
      *
      *
      */
-    public List<EntryTransaction8> getTxDtls() {
-        if (txDtls == null) {
-            txDtls = new ArrayList<EntryTransaction8>();
-        }
+    public EntryTransaction8 getTxDtls() {
+
         return this.txDtls;
     }
+
+
 
 }

@@ -16,9 +16,9 @@ public class IpcsRestController {
     GenerateIpFile generateIpFile;
 
     @PutMapping(value = "/order")
-    public void putIpOrder(@RequestBody IpOrderRequest ipOrderRequest) {
+    public void putSTMT(@RequestBody IpOrderRequest ipOrderRequest) {
 
-        generateIpFile.putIpOrder(ipOrderRequest);
+        generateIpFile.putSTMT(ipOrderRequest);
 
     }
 

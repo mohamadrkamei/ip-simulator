@@ -4,5 +4,5 @@ import com.example.ipsimulator.model.entity.IpOrderRequest;
 
 public interface GenerateIpFile {
 
-    void putIpOrder(IpOrderRequest ipOrderRequest);
+    void putSTMT(IpOrderRequest ipOrderRequest);
 }
