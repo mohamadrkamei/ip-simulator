@@ -41,6 +41,10 @@ public class EntryDetails7 {
     @XmlElement(name = "TxDtls", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public EntryTransaction8 txDtls;
 
+
+    public void setTxDtls(EntryTransaction8 txDtls){
+        this.txDtls = txDtls ;
+    }
     /**
      * Gets the value of the btch property.
      *

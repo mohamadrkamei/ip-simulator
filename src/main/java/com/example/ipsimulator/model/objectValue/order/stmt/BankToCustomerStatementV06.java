@@ -1,10 +1,7 @@
 
 package com.example.ipsimulator.model.objectValue.order.stmt;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,12 +33,13 @@ import java.util.List;
     "stmt",
     "splmtryData"
 })
+@XmlRootElement
 public class BankToCustomerStatementV06 {
 
     @XmlElement(name = "GrpHdr", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06", required = true)
     public GroupHeader58 grpHdr;
     @XmlElement(name = "Stmt", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06", required = true)
-    public List<AccountStatement6> stmt;
+    public AccountStatement6 stmt;
     @XmlElement(name = "SplmtryData", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public List<SupplementaryData1> splmtryData;
 
@@ -91,11 +89,13 @@ public class BankToCustomerStatementV06 {
      *
      *
      */
-    public List<AccountStatement6> getStmt() {
-        if (stmt == null) {
-            stmt = new ArrayList<AccountStatement6>();
-        }
+    public AccountStatement6 getStmt() {
+
         return this.stmt;
+    }
+
+    public void setStmt(AccountStatement6 stmt){
+        this.stmt=stmt;
     }
 
     /**

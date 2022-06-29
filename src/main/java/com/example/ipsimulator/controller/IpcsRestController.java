@@ -16,7 +16,7 @@ public class IpcsRestController {
     GenerateIpFile generateIpFile;
 
     @PutMapping(value = "/order")
-    public void putSTMT(@RequestBody IpOrderRequest ipOrderRequest) {
+    public void putSTMT(@RequestBody IpOrderRequest ipOrderRequest) throws Exception {
 
         generateIpFile.putSTMT(ipOrderRequest);
 

@@ -1,10 +1,7 @@
 
 package com.example.ipsimulator.model.objectValue.order.stmt;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
@@ -30,6 +27,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06", propOrder = {
     "bkToCstmrStmt"
 })
+
+@XmlRootElement(name = "Document")
 public class Document {
 
     @XmlElement(name = "BkToCstmrStmt", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06", required = true)

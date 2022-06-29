@@ -39,4 +39,6 @@ public class Transaction {
     private String returnReasonCode;
     private String instructionID;
 
+    private String entToEndID;
+
 }

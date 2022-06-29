@@ -33,7 +33,7 @@ class IpSimulatorApplicationTests {
     }
 
     @Test
-    public void putStatment(){
+    public void putStatment() throws Exception {
         IpOrderRequest ipOrderRequest = new IpOrderRequest();
         ipOrderRequest.setCount(2);
         ipOrderRequest.setCycleNo(1);

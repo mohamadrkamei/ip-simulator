@@ -39,7 +39,7 @@ public class Charges4 {
     @XmlElement(name = "TtlChrgsAndTaxAmt", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
     public ActiveOrHistoricCurrencyAndAmount ttlChrgsAndTaxAmt;
     @XmlElement(name = "Rcrd", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.06")
-    public List<ChargesRecord2> rcrd;
+    public ChargesRecord2 rcrd;
 
     /**
      * Gets the value of the ttlChrgsAndTaxAmt property.
@@ -87,11 +87,10 @@ public class Charges4 {
      *
      *
      */
-    public List<ChargesRecord2> getRcrd() {
-        if (rcrd == null) {
-            rcrd = new ArrayList<ChargesRecord2>();
-        }
+    public ChargesRecord2 getRcrd() {
         return this.rcrd;
     }
+
+    public void setRcrd(ChargesRecord2 rcrd){ this.rcrd= rcrd ;}
 
 }
